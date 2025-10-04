@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome Pixel CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <div class="game-header">
+    <h1>Batu Gunting Kertas</h1>
+    <p>Ucapkan "Batu", "Gunting", atau "Kertas" untuk bermain.</p>
+
+    <button type="button" onclick="init()">Mulai Game</button>
+    </div>
+
+    <div id="game-container" class="hidden">
+        <div class="score-container">
+            <div class="score-box">
+                <h3>Anda</h3>
+                <h2 id="player-score">0</h2>
+            </div>
+            <div class="score-box">
+                <h3>Komputer</h3>
+                <h2 id="computer-score">0</h2>
+            </div>
+        </div>
+        
+        <div class="choice-display">
+            <span id="player-choice-icon"><i class="fa-solid fa-gamepad"></i></span>
+            <span> vs </span>
+            <span id="computer-choice-icon"><i class="fa-solid fa-desktop"></i></span>
+        </div>
+        
+        <h2>Anda: <span id="player-choice">-</span></h2>
+        <h2>Komputer: <span id="computer-choice">-</span></h2>
+    <h1><span id="result">-</span></h1>
+    <p id="next-round" class="hidden">Next Round siap! Ucapkan pilihan Anda lagi.</p>
+        
+        <button type="button" class="reset-btn" onclick="resetGame()">Reset Skor</button>
+    </div>
+
+    <div id="label-container"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/speech-commands@0.4.0/dist/speech-commands.min.js"></script>
+    <script src="main.JS"></script>
+  
+</body>
+</html>
